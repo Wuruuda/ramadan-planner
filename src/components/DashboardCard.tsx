@@ -10,12 +10,12 @@ export function DashboardCard({ title, children, className, ...props }: Dashboar
   return (
     <div
       className={cn(
-        "bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg animate-fadeIn",
+        "bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-xl border border-white/20 transition-all hover:bg-white/85 animate-fadeIn",
         className
       )}
       {...props}
     >
-      <h3 className="text-xl font-semibold mb-4 text-secondary">{title}</h3>
+      <h3 className="text-xl md:text-2xl font-semibold mb-6 text-secondary border-b pb-2 border-secondary/20">{title}</h3>
       {children}
     </div>
   );
