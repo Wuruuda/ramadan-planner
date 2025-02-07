@@ -13,9 +13,9 @@ const Index = () => {
         <header className="text-center mb-12 animate-fadeIn relative">
           <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-32 h-32 md:w-40 md:h-40 opacity-80 animate-pulse">
             <img 
-              src="https://images.unsplash.com/photo-1558872534-fc603c99c25a?auto=format&fit=crop&q=80&w=500" 
+              src="/lovable-uploads/ed656654-b9e6-4309-9b08-9fb3af667b01.png" 
               alt="Ramadan Lantern" 
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
             />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-secondary mb-4 drop-shadow-lg mt-16">
@@ -31,7 +31,14 @@ const Index = () => {
             <PrayerTracker />
           </DashboardCard>
 
-          <DashboardCard title="Quran Progress">
+          <DashboardCard title="Quran Progress" className="relative group">
+            <div className="absolute -top-12 right-4 w-24 h-24 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+              <img 
+                src="/lovable-uploads/d37e9960-e261-4088-8db7-184bb475a188.png" 
+                alt="Quran Mushaf" 
+                className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
+              />
+            </div>
             <QuranTracker />
           </DashboardCard>
 
@@ -39,6 +46,12 @@ const Index = () => {
             <MealPlanner />
           </DashboardCard>
         </div>
+
+        <footer className="text-center mt-12 pb-4 text-muted-foreground animate-fadeIn">
+          <p className="text-sm">
+            © {new Date().getFullYear()} Warda Omar. All rights reserved.
+          </p>
+        </footer>
       </div>
     </div>
   );
